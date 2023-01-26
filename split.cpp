@@ -15,7 +15,7 @@ the function below should be the only one in this file.
 
 /* Add a prototype for a helper function here if you need */
 void push(Node*& list, Node*& in);
-// push_back the first element of in to the list and then delete the it from in
+// push_back the first element of "in" to the list and then delete the it from "in"
 
 
 void split(Node*& in, Node*& odds, Node*& evens)
@@ -46,17 +46,20 @@ void push(Node*& list, Node*& in){
     return;
   }
   
-  Node* next_element;
-  next_element = list;
-
-  // find the last element of the list
-  while (next_element->next != NULL){
-    next_element = next_element->next;
-
+  else {
+    push(list->next, in);
   }
-  next_element->next = in;
-  Node* temp_2 = in->next;
-  in->next = NULL;
-  in = temp_2;
+  // Node* next_element;
+  // next_element = list;
+
+  // // find the last element of the list
+  // while (next_element->next != NULL){
+  //   next_element = next_element->next;
+
+  // }
+  // next_element->next = in;
+  // Node* temp_2 = in->next;
+  // in->next = NULL;
+  // in = temp_2;
   
 }
